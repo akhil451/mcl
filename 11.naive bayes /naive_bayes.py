@@ -22,7 +22,7 @@ Data Preprocessing Template
 import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt
-df=pd.read_csv( '/home/akhil/Desktop/dataScience/08.logistic regression ./Social_Network_Ads.csv')
+df=pd.read_csv( 'Social_Network_Ads.csv')
 
 # Importing the dataset
 x = df.iloc[:,[2,3]].values#independent
