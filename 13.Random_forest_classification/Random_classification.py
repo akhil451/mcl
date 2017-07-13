@@ -42,8 +42,9 @@ x_train=scX.fit_transform(x_train)
 x_test=scX.fit_transform(x_test)
 
 # create our classfier here 
-
-
+from sklearn.ensemble import RandomForestClassifier
+classifier=RandomForestClassifier(n_estimators=100)
+classifier.fit(x_train,y_train)
 #predict
 y_pred=classifier.predict(x_test)
 
