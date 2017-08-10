@@ -1,6 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Created on Thu Aug 10 10:56:51 2017
+
+@author: akhil
+"""
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
 Created on Wed Aug  9 16:06:34 2017
 
 @author: akhil
@@ -21,11 +29,10 @@ X_train=scx.fit_transform(X_train)
 X_test=scx.transform(X_test)
 
 
-from sklearn.decomposition import PCA
-pca=PCA(n_components=3)
-X_train = pca.fit_transform(X_train)
-X_test=pca.transform(X_test)
-explained_variance = pca.explained_variance_ratio_
+from sklearn.decomposition import KernelPCA
+kpca=KernelPCA(n_components=3)
+X_train =kpca.fit_transform(X_train,y_train)
+X_test=kpca.transform(X_test)
 
 from sklearn.linear_model import LogisticRegression
 classifier = LogisticRegression(random_state=0)
